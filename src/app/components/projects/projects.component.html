@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <!-- PROJECTS LIST -->
+    <div class="col-50">
+      <app-projects-list [projects]="projects" (selected)="selectProject($event)" (deleted)="deleteProject($event)"></app-projects-list>
+    </div>
+    <!-- PROJECT DETAILS -->
+    <div class="col-50">
+      <app-project-details [selectedProject]="selectedProject" (saved)="saveProject($event)" (cancelled)="cancel()"></app-project-details>
+    </div>
+  </div>
+</div>
